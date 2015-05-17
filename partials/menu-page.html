@@ -6,8 +6,8 @@
 <div id="pane" class="text-center container">
     <h1>Select Delivery Location</h1>
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 col-md-offset-2 col-sm-offset-2 col-lg-offset-2" id="location-list">
-        <ul class="list-group">
-            <li class="list-group-item clearfix" ng-repeat="location in locations"><a class="outlet-name" href="#/outlets/{{location.id}}">{{location.name}} <span class="icon-position glyphicon glyphicon-chevron-right pull-right "></span></a> </li>
+        <ul class="list-group col-lg-12 col-md-12 col-sm-12">
+            <li class="list-group-item clearfix" ng-repeat="location in locations"><a class="outlet-name clearfix" href="#/outlets/{{location.id}}"><span class="col-lg-11 col-md-11">{{location.name}} </span><span class="icon-position glyphicon glyphicon-chevron-right col-lg-1 col-md-1 "></span></a> </li>
         </ul>
     </div>
 </div>

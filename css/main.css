@@ -454,6 +454,7 @@ a:hover{
 }
 #pane{
     margin-bottom: 150px;
+    margin-top: 50px;
 }
 #pane h1{
 	color:#8A8787;
@@ -473,7 +474,8 @@ a:hover{
   border-color: #e97770;
 }
 #location-list  .outlet-name{
-	  color: #777777;
+    padding-left: 20px;
+  color: #777777;
   font-weight: bold;
   display: block;
   overflow: hidden;
@@ -482,7 +484,7 @@ a:hover{
   white-space: nowrap;
 }
 .icon-position{
-	margin-right: 30px;
+	/*margin-right: 10px;*/
 }
 #main-pane .menu-pane {
     margin-top: 20px;
@@ -509,6 +511,7 @@ a:hover{
 }
 #main-pane .thumbnail img{
     width: 100%;
+    height: 230px;
 }
 #main-pane .thumbnail:hover{
     cursor: pointer;
