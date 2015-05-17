@@ -1,0 +1,64 @@
+<div id="header" class=" container-fluid clearfix">
+    <ul class="nav nav-pills pull-left">
+        <li role="presentation" class="active"><a class="current-outlet-name">{{currentOutlet.name}}</a></li>
+        <li role="presentation"><a href="#/outlets">Change Outlet</a></li>
+    </ul>
+    <div class="pull-left">
+        <div class="text-center">
+            <img src="img/Eatlo_Logo_square.png">
+        </div>
+    </div>
+</div>
+<div id="main-pane" class="container-fluid">
+    <div class="clearfix menu-pane">
+        <p class="pull-left lead">Menu</p>
+        <div class="btn-group pull-left" role="group" aria-label="...">
+            <button type="button" class="btn btn-default" ng-click="categoryBased('all')">All</button>
+            <button type="button" class="btn btn-default" ng-click="categoryBased('veg')">Veg</button>
+            <button type="button" class="btn btn-default" ng-click="categoryBased('nonveg')">Non-veg</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-md-3 col-lg-3 col-sm-3" ng-repeat="item in currentOutlet.items | orderBy : foodType">
+            <a class="thumbnail">
+                <img ng-src="{{item.imgUrl}}" alt="...">
+                <div class="clearfix">
+                    <div class="pull-left"><h4><div class="{{item.isVeg ? 'circle green' : 'circle red'}}"></div>{{item.name}}</h4></div>
+                    <div class="pull-right"><p class="price">Rs. {{item.price}}</p></div>
+                </div>
+                <br/>
+                <p class="description">{{item.description}}</p>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class=""><a href="#/outlets">Choose Location <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="#">Choose Dishes</a></li>
+                        <li><a href="#">Place Order</a></li>
+                        <li><a href="#" >Order Histroy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>

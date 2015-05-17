@@ -1,0 +1,258 @@
+[
+  {
+    "id":1,
+    "name" : "First Outlet Name",
+    "items":[
+      {
+        "itemId":1,
+        "name":"outlet1 First Item Name",
+        "imgUrl":"img/web_anda-curry-recipe1-15-05-2015-14-06-01.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":100,
+        "isSold":true,
+        "isVeg":true
+      },
+      {
+        "itemId":2,
+        "name":"outlet1 Second Item Name",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":110,
+        "isSold":false,
+        "isVeg":false
+      },
+      {
+        "itemId":3,
+        "name":"outlet1 Third Item Name",
+        "imgUrl":"img/web_mango-oats-smoothie12-968x1024-15-05-2015-14-04-25.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":160,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":4,
+        "name":"outlet1 Fourth Item Name",
+        "imgUrl":"img/web_sookhe_kale_chane-15-05-2015-14-01-05.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":130,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":5,
+        "name":"outlet1 Fifth Item Name",
+        "imgUrl":"img/web_tomatorice-15-05-2015-14-03-23.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":120,
+        "isSold":true,
+        "isVeg":false
+      }
+
+    ]
+  },
+  {
+    "id":2,
+    "name" : "Second Outlet Name",
+    "items":[
+      {
+        "itemId":1,
+        "name":"firstItemName",
+        "imgUrl":"img/web_anda-curry-recipe1-15-05-2015-14-06-01.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":100,
+        "isSold":true,
+        "isVeg":true
+      },
+      {
+        "itemId":2,
+        "name":"secondItemName",
+        "imgUrl":"img/web_tomatorice-15-05-2015-14-03-23.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":110,
+        "isSold":false,
+        "isVeg":false
+      },
+      {
+        "itemId":3,
+        "name":"thirdItemName",
+        "imgUrl":"img/web_sookhe_kale_chane-15-05-2015-14-01-05.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":160,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":4,
+        "name":"fourthItemName",
+        "imgUrl":"img/web_mango-oats-smoothie12-968x1024-15-05-2015-14-04-25.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":130,
+        "isSold":false
+      },
+      {
+        "itemId":5,
+        "name":"fifthItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":120,
+        "isSold":true,
+        "isVeg":false
+      }
+
+    ]
+  },
+  {
+    "id":3,
+    "name" : "Third Outlet Name",
+    "items":[
+      {
+        "itemId":1,
+        "name":"firstItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":100,
+        "isSold":true
+      },
+      {
+        "itemId":2,
+        "name":"secondItemName",
+        "imgUrl":"img/web_anda-curry-recipe1-15-05-2015-14-06-01.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":110,
+        "isSold":false
+      },
+      {
+        "itemId":3,
+        "name":"thirdItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":160,
+        "isSold":false
+      },
+      {
+        "itemId":4,
+        "name":"fourthItemName",
+        "imgUrl":"img/web_sookhe_kale_chane-15-05-2015-14-01-05.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":130,
+        "isSold":false
+      },
+      {
+        "itemId":5,
+        "name":"fifthItemName",
+        "imgUrl":"img/web_tomatorice-15-05-2015-14-03-23.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":120,
+        "isSold":true
+      }
+
+    ]
+  },
+  {
+    "id":4,
+    "name" : "Fourth Outlet Name",
+    "items":[
+      {
+        "itemId":1,
+        "name":"firstItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":100,
+        "isSold":true,
+        "isVeg":true
+      },
+      {
+        "itemId":2,
+        "name":"secondItemName",
+        "imgUrl":"img/web_anda-curry-recipe1-15-05-2015-14-06-01.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":110,
+        "isSold":false,
+        "isVeg":false
+      },
+      {
+        "itemId":3,
+        "name":"thirdItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":160,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":4,
+        "name":"fourthItemName",
+        "imgUrl":"img/web_sookhe_kale_chane-15-05-2015-14-01-05.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":130,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":5,
+        "name":"fifthItemName",
+        "imgUrl":"img/web_tomatorice-15-05-2015-14-03-23.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":120,
+        "isSold":true,
+        "isVeg":true
+
+      }
+
+    ]
+  },
+  {
+    "id":5,
+    "name" : "Fifth Outlet Name",
+    "items":[
+      {
+        "itemId":1,
+        "name":"firstItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":100,
+        "isSold":true,
+        "isVeg":false
+      },
+      {
+        "itemId":2,
+        "name":"secondItemName",
+        "imgUrl":"img/web_anda-curry-recipe1-15-05-2015-14-06-01.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":110,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":3,
+        "name":"thirdItemName",
+        "imgUrl":"img/web_chicken_kashmiri-15-05-2015-14-07-38.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":160,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":4,
+        "name":"fourthItemName",
+        "imgUrl":"img/web_sookhe_kale_chane-15-05-2015-14-01-05.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":130,
+        "isSold":false,
+        "isVeg":true
+      },
+      {
+        "itemId":5,
+        "name":"fifthItemName",
+        "imgUrl":"img/web_tomatorice-15-05-2015-14-03-23.jpg",
+        "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat lacus, accumsan id magna hendrerit, finibus ultrices mauris. Proin consequat,",
+        "price":120,
+        "isSold":true,
+        "isVeg":true
+      }
+
+    ]
+  }
+
+]
