@@ -22,12 +22,19 @@ app.controller('appCtrl',['$scope', '$http', 'appService', function($scope, $htt
 			appService.setAllOutlets(data);
 			$scope.allOutletData = data;
 		});
-	$scope.hello = "manish welcome";
+	$scope.hello = "manish welcome !!";
 	$scope.locations = appService.getAllOutlets();
 }]);
-app.controller('outletCtrl', ['$scope', '$routeParams', 'appService', function($scope, $routeParams, $appService){
+app.controller('outletCtrl', ['$scope', '$routeParams','$location', 'appService', function($scope, $routeParams, $location, $appService){
+	$scope.cartedItemIds = [];
+	$scope.cartItems = [];
+	$scope.itemCount = 0;
+	$scope.totalAmount = 0;
 	$scope.currentOutletData = $appService.getOutletById(parseInt($routeParams.outletId));
 	$scope.currentOutlet = $appService.getOutletById(parseInt($routeParams.outletId));
+	if($scope.currentOutlet == undefined){
+		$location.path('/outlets')
+	}
 	var allData = $scope.currentOutletData.items;
 	$scope.categoryBased = function(category){
 		var sortedList = [];
@@ -49,6 +56,74 @@ app.controller('outletCtrl', ['$scope', '$routeParams', 'appService', function($
 		});
 		$scope.currentOutlet.items = sortedList;
 	};
+	$scope.addItemToCart = function(item){
+		item.totalPrice = item.price;
+		$scope.selectedItem = item;
+		$scope.totalAmount += item.price;
+		$scope.addedToCart($scope.selectedItem);
+	};
+	$scope.addedToCart = function (item){
+		if(item.quantity ==0){
+			item.quantity = 1;
+		}
+		$scope.itemCount++;
+		var currItemId = item.itemId;
+		if($scope.cartedItemIds.indexOf(currItemId) == -1){
+			$scope.cartedItemIds.push(currItemId);
+			$scope.cartItems.push(item);
+		}
+		else{
+			angular.forEach($scope.cartItems, function(key,index){
+				if(key.itemId == currItemId ){
+					console.log(index);
+					var currItem = _.findWhere($scope.cartItems, {itemId:currItemId});
+					$scope.cartItems[index].quantity += 1;
+					$scope.cartItems[index].totalPrice =  $scope.cartItems[index].quantity * item.price;
+				}
+			})
+		}
+		$scope.decreaseItemCount = function(item){
+			$scope.itemCount--;
+			$scope.totalAmount -= item.price;
+			angular.forEach($scope.cartItems, function(key, index){
+				if(key.itemId == item.itemId){
+					$scope.cartItems[index].quantity -= 1;
+					$scope.cartItems[index].totalPrice =  $scope.cartItems[index].quantity * item.price;
+					if($scope.cartItems[index].quantity == 0){
+						$scope.cartedItemIds = _.without($scope.cartedItemIds, item.itemId);
+						$scope.cartItems = _.without($scope.cartItems, _.findWhere($scope.cartItems, {itemId: item.itemId}));
+						//var index = $scope.cartItems.indexOf(item);
+						//$scope.cartItems.splice(index, 1);
+					}
+
+				}
+			});
+		};
+		$scope.increaseItemCount = function(item){
+			$scope.itemCount++;
+			$scope.totalAmount += item.price;
+			angular.forEach($scope.cartItems, function(key, index){
+				if(key.itemId == item.itemId){
+					$scope.cartItems[index].quantity += 1;
+					$scope.cartItems[index].totalPrice =  $scope.cartItems[index].quantity * item.price;
+				}
+			});
+		};
+		$scope.deleteItem = function(item){
+			angular.forEach($scope.cartItems, function(key, index) {
+				if (key.itemId == item.itemId) {
+					$scope.itemCount -= $scope.cartItems[index].quantity;
+					$scope.totalAmount -= $scope.cartItems[index].quantity * item.price;
+					$scope.cartedItemIds = _.without($scope.cartedItemIds, item.itemId);
+					$scope.cartItems = _.without($scope.cartItems, _.findWhere($scope.cartItems, {itemId: item.itemId}));
+					//var index = $scope.cartItems.indexOf(item);
+					//$scope.cartItems.splice(index, 1);
+				}
+			});
+		}
+
+	};
+
 
 }]);
 

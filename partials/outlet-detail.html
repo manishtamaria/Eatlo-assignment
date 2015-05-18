@@ -8,6 +8,14 @@
             <img src="img/Eatlo_Logo_square.png">
         </div>
     </div>
+    <div class=" pull-right">
+        <div class="clearfix">
+            <div class="pull-right"><img onclick="window.open('http://www.eatloapp.com/app')" src="img/apple.png" alt="apple" height="50px" width="50px"></div>
+            <div class="pull-right"><img onclick="window.open('http://www.eatloapp.com/app')" src="img/android.png" alt="android" height="50px" width="50px"></div>
+            <div class="pull-right"><img onclick="window.open('https://www.twitter.com/eatloapp')" src="img/twitter.png" alt="Twitter" height="50px" width="50px"></div>
+            <div class="pull-right"><img onclick="window.open('https://www.facebook.com/eatloapp')" src="img/facebook.png" alt="Facebook" height="50px" width="50px"></div>
+        </div>
+    </div>
 </div>
 <div id="main-pane" class="container-fluid">
     <div class="clearfix menu-pane">
@@ -18,19 +26,52 @@
             <button type="button" class="btn btn-default" ng-click="categoryBased('nonveg')">Non-veg</button>
         </div>
     </div>
-    <div class="row">
-        <div class="col-xs-6 col-md-3 col-lg-3 col-sm-3" ng-repeat="item in currentOutlet.items | orderBy : foodType">
-            <a class="thumbnail">
-                <img ng-src="{{item.imgUrl}}" alt="...">
-                <div class="clearfix">
-                    <div class="pull-left"><h4><div class="{{item.isVeg ? 'circle green' : 'circle red'}}"></div>{{item.name}}</h4></div>
-                    <div class="pull-right"><p class="price">Rs. {{item.price}}</p></div>
+    <div class="clearfix">
+        <div class="col-md-9 col-lg-9 col-sm-9">
+            <div class="col-xs-6 col-md-4 col-lg-4 col-sm-4" ng-repeat="item in currentOutlet.items | orderBy : foodType">
+                <a class="thumbnail" ng-click ="addItemToCart(item)">
+                    <img ng-src="{{item.imgUrl}}" alt="...">
+                    <div class="clearfix">
+                        <div class="pull-left"><h4><div class="{{item.isVeg ? 'circle green' : 'circle red'}}"></div>{{item.name}}</h4></div>
+                        <div class="pull-right"><p class="price">&#x20b9; {{item.price}}</p></div>
+                    </div>
+                    <br/>
+                    <p class="description">{{item.description}}</p>
+                </a>
+            </div>
+        </div>
+        <div ng-show="itemCount > 0" class="col-lg-3 col-md-3 col-sm-3">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <div class="thumbnail" id="cart">
+                    <p class="product-count"><span class="glyphicon glyphicon-shopping-cart"></span>{{itemCount}} items of {{cartItems.length}} products</p>
+                    <div ng-repeat="item in cartItems" class="item-in-cart">
+                        <p class="item-name">{{item.name}}</p>
+                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 ">
+                            <div class="pull-left col-lg-4 col-sm-4 col-md-4 text-center">
+                                {{item.quantity}}<br/>
+
+                            </div>
+                            <div class="pull-right col-lg-8 col-md-8 col-sm-8 text-right">
+                                &#x20b9; {{item.totalPrice}}
+                            </div>
+                        </div>
+                        <div class="clearfix increment-tab " >
+                            <div class="pull-left ">
+                                <button class="change-count " ng-click="decreaseItemCount(item)"><strong>-</strong></button> &nbsp;<button class="change-count " ng-click="increaseItemCount(item)"><strong>+</strong></button>
+                            </div>
+                            <div class="pull-right">
+                                <button class="cancel-item" ng-click="deleteItem(item)"><strong>x</strong></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <p class="text-center total">Total : <strong>&#x20b9;{{totalAmount}}</strong></p>
+                    </div>
                 </div>
-                <br/>
-                <p class="description">{{item.description}}</p>
-            </a>
+            </div>
         </div>
     </div>
+
 </div>
 <div id="footer">
     <nav class="navbar navbar-default">
