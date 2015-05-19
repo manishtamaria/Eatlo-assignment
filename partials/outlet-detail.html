@@ -44,26 +44,29 @@
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="thumbnail" id="cart">
                     <p class="product-count"><span class="glyphicon glyphicon-shopping-cart"></span>{{itemCount}} items of {{cartItems.length}} products</p>
-                    <div ng-repeat="item in cartItems" class="item-in-cart">
-                        <p class="item-name">{{item.name}}</p>
-                        <div class="clearfix col-lg-12 col-md-12 col-sm-12 ">
-                            <div class="pull-left col-lg-4 col-sm-4 col-md-4 text-center">
-                                {{item.quantity}}<br/>
+                    <div id="cart-items">
+                        <div ng-repeat="item in cartItems" class="item-in-cart">
+                            <p class="item-name">{{item.name}}</p>
+                            <div class="clearfix col-lg-12 col-md-12 col-sm-12 ">
+                                <div class="pull-left col-lg-4 col-sm-4 col-md-4 text-center">
+                                    {{item.quantity}}<br/>
 
+                                </div>
+                                <div class="pull-right col-lg-8 col-md-8 col-sm-8 text-right">
+                                    &#x20b9; {{item.totalPrice}}
+                                </div>
                             </div>
-                            <div class="pull-right col-lg-8 col-md-8 col-sm-8 text-right">
-                                &#x20b9; {{item.totalPrice}}
-                            </div>
-                        </div>
-                        <div class="clearfix increment-tab " >
-                            <div class="pull-left ">
-                                <button class="change-count " ng-click="decreaseItemCount(item)"><strong>-</strong></button> &nbsp;<button class="change-count " ng-click="increaseItemCount(item)"><strong>+</strong></button>
-                            </div>
-                            <div class="pull-right">
-                                <button class="cancel-item" ng-click="deleteItem(item)"><strong>x</strong></button>
+                            <div class="clearfix increment-tab " >
+                                <div class="pull-left ">
+                                    <button class="change-count " ng-click="decreaseItemCount(item)"><strong>-</strong></button> &nbsp;<button class="change-count " ng-click="increaseItemCount(item)"><strong>+</strong></button>
+                                </div>
+                                <div class="pull-right">
+                                    <button class="cancel-item" ng-click="deleteItem(item)"><strong>x</strong></button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="clearfix">
                         <p class="text-center total">Total : <strong>&#x20b9;{{totalAmount}}</strong></p>
                     </div>
