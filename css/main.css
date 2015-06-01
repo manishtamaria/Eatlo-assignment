@@ -630,3 +630,7 @@ a:hover{
     font-weight: normal;
     padding-top: 10px;
 }
+.cart-thumbnail{
+    position: fixed;
+    right: 0;
+}

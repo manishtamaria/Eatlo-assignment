@@ -12,6 +12,10 @@ app.config(['$routeProvider',
 				templateUrl: 'partials/outlet-detail.html',
 				controller: 'outletCtrl'
 			}).
+			when('/admin', {
+				templateUrl: 'partials/admin.html',
+				controller: 'adminCtrl'
+			}).
 			otherwise({
 				redirectTo: '/outlets'
 			});
@@ -24,6 +28,11 @@ app.controller('appCtrl',['$scope', '$http', 'appService', function($scope, $htt
 		});
 	$scope.hello = "manish welcome !!";
 	$scope.locations = appService.getAllOutlets();
+}]);
+app.controller('adminCtrl', ['$scope', '$http', 'appService', function($scope, $http, appService){
+	$http.get('data.json').success(function(data){
+
+	})
 }]);
 app.controller('outletCtrl', ['$scope', '$routeParams','$location', 'appService', function($scope, $routeParams, $location, $appService){
 	$scope.cartedItemIds = [];
